@@ -42,4 +42,11 @@ encrypted_file.close()
 
 # Write code below
 
-print(type(encrypted_message))
+def get_key(val):
+   
+    for key, value in cipher.items():
+        if val == value:
+            return key
+
+for char in encrypted_message:
+    print(get_key(char), end='')
