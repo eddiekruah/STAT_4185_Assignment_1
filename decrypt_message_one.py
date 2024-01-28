@@ -34,10 +34,19 @@ cipher = {
     '.': '%' 
 }
 
-encrypted_file = open("encrypted_message_one.txt", 'r')
+encrypted_file = open("/Users/eddiekruah/Downloads/STAT 4188/HW1/STAT_4185_Assignment_1/encrypted_message_one.txt", 'r')
 
 encrypted_message = encrypted_file.readline()
 
 encrypted_file.close()
 
 # Write code below
+
+def get_key(val):
+   
+    for key, value in cipher.items():
+        if val == value:
+            return key
+
+for char in encrypted_message:
+    print(get_key(char), end='')
